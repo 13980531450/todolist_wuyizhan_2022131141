@@ -11,8 +11,13 @@ function addTask() {
     `;
     taskList.appendChild(li);
     taskInput.value = '';
+
+    li.addEventListener('click', function() {
+        this.classList.toggle('completed');
+    });
 }
 
 function deleteTask(element) {
     element.parentElement.remove();
 }
+
